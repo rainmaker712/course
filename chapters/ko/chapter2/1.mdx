@@ -1,12 +1,25 @@
 # Introduction
 
-As you saw in [Chapter 1](/course/chapter1), Transformer models are usually very large. With millions to tens of *billions* of parameters, training and deploying these models is a complicated undertaking. Furthermore, with new models being released on a near-daily basis and each having its own implementation, trying them all out is no easy task.
+As you saw in [Chapter 1](/course/chapter1), Transformer models are usually very large.
+With millions to tens of *billions* of parameters, training and deploying these models is a complicated undertaking.
+Furthermore, with new models being released on a near-daily basis and each having its own implementation,
+trying them all out is no easy task.
 
-The 🤗 Transformers library was created to solve this problem. Its goal is to provide a single API through which any Transformer model can be loaded, trained, and saved. The library's main features are:
+[Chapter 1](/course/chapter1)에서 보았던 것 처럼, Transformer 모델들은 일반적으로 매우 거대합니다. 수백, 수천억개의 파라메터들이 학습과 배포을 어려운 작업으로 만듭니다. 게다가 새로운 모델들이 거의 매일 출시되고, 각각 독자적인 구현이 있어, 모든 것을 시도 해 보는 것은 쉬운 일이 아닙니다.
 
-- **Ease of use**: Downloading, loading, and using a state-of-the-art NLP model for inference can be done in just two lines of code.
-- **Flexibility**: At their core, all models are simple PyTorch `nn.Module` or TensorFlow `tf.keras.Model` classes and can be handled like any other models in their respective machine learning (ML) frameworks.
-- **Simplicity**: Hardly any abstractions are made across the library. The "All in one file" is a core concept: a model's forward pass is entirely defined in a single file, so that the code itself is understandable and hackable.
+The 🤗 Transformers library was created to solve this problem. 
+Its goal is to provide a single API through which any Transformer model can be loaded, trained, and saved. 
+The library's main features are:
+
+🤗 Transformers 라이브러리는 해당 문제를 해결하기 위해 제작되었습니다. 이 라이버러리의 단일 API를 제공하는 목표는 어떤 Transformer 모델이라도 불러오기, 학습하기, 저장하기가 가능하도록 하는 것입니다.
+라이브러리의 주요 기능은 아래와 같습니다:
+
+
+Downloading, loading, and using a state-of-the-art NLP model for inference can be done in just two lines of code.
+- **손쉬운 사용성**: 다운로드, 불러오기, 그리고 사용까지 
+
+- **유연성**: At their core, all models are simple PyTorch `nn.Module` or TensorFlow `tf.keras.Model` classes and can be handled like any other models in their respective machine learning (ML) frameworks.
+- **단순함**: Hardly any abstractions are made across the library. The "All in one file" is a core concept: a model's forward pass is entirely defined in a single file, so that the code itself is understandable and hackable.
 
 This last feature makes 🤗 Transformers quite different from other ML libraries. The models are not built on modules 
 that are shared across files; instead, each model has its own layers. In addition to making the models more approachable and understandable, this allows you to easily experiment on one model without affecting others.
